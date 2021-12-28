@@ -6,10 +6,10 @@ edition = "2018"
 
 [dependencies]
 panic-halt = "0.2.0"
-riscv = "0.5.4"
-riscv-rt = "0.6.1"
-embedded-hal = "0.2.3"
-gd32vf103-hal = { git = "https://github.com/gd32v-rust/gd32vf103-hal", rev = "892cb47ffd3a8cdf0fa2b51f9af402be6bfc4f53" }
+riscv = "0.7.0"
+riscv-rt = "0.8.0"
+embedded-hal = "1.0.0-alpha.6"
+gd32vf103-hal = { git = "https://github.com/pineapplehunter/gd32vf103-hal", rev = "4362794336e24b0b35177da86fc3c9af85e1763b" }
 
 # this lets you use `cargo fix`!
 [[bin]]
@@ -19,5 +19,5 @@ bench = false
 
 [profile.release]
 codegen-units = 1 # better optimizations
-debug = true      # symbols are nice and they don't increase the size on Flash
-lto = true        # better optimizations
+debug = true # symbols are nice and they don't increase the size on Flash
+lto = true # better optimizations
